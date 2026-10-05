@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savoria — Fine Dining Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:#faf6f0;color:#2b2118;line-height:1.7}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.container{max-width:1180px;margin:auto;padding:0 24px}
+.topbar{background:#1d130c;color:#e8c87e;text-align:center;padding:9px;font-size:13px;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;position:sticky;top:0;background:rgba(250,246,240,.95);backdrop-filter:blur(10px);z-index:20}
+.logo{font-size:32px;font-weight:700}.logo span{color:#c0392b}
+.links a{margin:0 14px;text-decoration:none;color:#2b2118;font-weight:600;font-size:15px}
+.btn{display:inline-block;padding:14px 34px;border-radius:50px;text-decoration:none;font-weight:700;transition:.3s;border:none;cursor:pointer}
+.btn-red{background:#c0392b;color:#fff}.btn-red:hover{background:#96281b}
+.btn-dark{background:#1d130c;color:#fff}
+.btn-line{border:2px solid #1d130c;color:#1d130c;background:transparent}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:20px;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.15)}
+.hero-txt{background:linear-gradient(135deg,#1d130c,#4a2410);color:#fdf3e3;padding:70px 55px}
+.hero-txt h1{font-size:58px;line-height:1.08}.hero-txt h1 em{color:#e8a94e}
+.hero-img img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}
+.badges{display:flex;gap:12px;margin:22px 0;flex-wrap:wrap}
+.badges span{background:rgba(232,169,78,.18);border:1px solid #e8a94e;color:#e8c87e;padding:7px 16px;border-radius:30px;font-size:13px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:30px 0}
+.strip div{border-radius:18px;padding:26px;text-align:center;color:#fff}
+.s1{background:linear-gradient(135deg,#c0392b,#e67e22)}.s2{background:linear-gradient(135deg,#1d6b4a,#2ecc71)}.s3{background:linear-gradient(135deg,#7d3c98,#e84393)}.s4{background:linear-gradient(135deg,#0b4a6f,#3498db)}
+.sec{padding:70px 0}.sec h2{font-size:44px;text-align:center}.sec .sub{text-align:center;opacity:.65;margin-bottom:36px}
+.tabs{text-align:center;margin-bottom:28px}.tabs span{padding:10px 26px;border-radius:30px;margin:4px;display:inline-block;cursor:pointer;font-weight:600;background:#fff;border:1px solid #e5d9c8}.tabs .on{background:#1d130c;color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dish{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.3s}.dish:hover{transform:translateY(-6px)}
+.dish img{width:100%;height:230px;object-fit:cover}.dish div{padding:22px}.price{float:right;background:#c0392b;color:#fff;padding:4px 14px;border-radius:20px;font-weight:700}
+.chef{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#fff;border-radius:28px;padding:50px;align-items:center;box-shadow:0 15px 40px rgba(0,0,0,.07)}
+.chef img{width:100%;border-radius:22px;height:440px;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:16px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{border-radius:20px;padding:28px;color:#fff}.r1{background:linear-gradient(135deg,#c0392b,#7b241c)}.r2{background:linear-gradient(135deg,#0b4a6f,#154360)}.r3{background:linear-gradient(135deg,#1d6b4a,#0e3b2e)}
+.book{display:grid;grid-template-columns:1fr 380px;gap:26px;background:linear-gradient(135deg,#e8a94e,#c0392b);border-radius:28px;padding:50px;color:#fff;align-items:center}
+.form{background:#fff;color:#2b2118;border-radius:20px;padding:32px}
+.form input,.form select{width:100%;padding:13px;margin:8px 0;border-radius:12px;border:1px solid #ddd}
+footer{background:#1d130c;color:#bfae94;text-align:center;padding:36px;margin-top:50px;border-radius:28px 28px 0 0}
+@media(max-width:900px){.hero,.chef,.book{grid-template-columns:1fr}.menu-grid,.reviews,.strip,.gallery{grid-template-columns:1fr 1fr}.hero-txt h1{font-size:40px}.links{display:none}}
+@media(max-width:600px){.menu-grid,.reviews,.strip,.gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar">🔥 WEEKEND SPECIAL — 20% OFF tasting menu + FREE dessert | Fri – Sun</div>
+<div class="container">
+<nav><div class="logo">Savoria<span>.</span></div><div class="links"><a href="#">Home</a><a href="#menu">Menu</a><a href="#">Chef</a><a href="#">Gallery</a><a href="#">Reviews</a></div><a href="#book" class="btn btn-red">Reserve Table</a></nav>
+<div class="hero"><div class="hero-txt"><p style="letter-spacing:4px;color:#e8a94e;font-size:13px">★ ★ ★ ★ ★ &nbsp; MICHELIN GUIDE 2026</p><h1>Fire, Flavor <br>& <em>Fine Dining</em></h1><p style="opacity:.85;margin:18px 0">Wood-fired Mediterranean cuisine, organic farm ingredients, 200+ wines & live jazz every weekend in the heart of the city.</p><div class="badges"><span>🍷 Wine Cellar</span><span>🌿 Vegan & Halal</span><span>🎻 Live Jazz</span></div><a href="#book" class="btn btn-red">Book Your Evening</a> <a href="#menu" class="btn btn-line" style="border-color:#e8a94e;color:#e8c87e;margin-left:8px">Explore Menu</a><p style="margin-top:18px;font-size:14px;opacity:.7">📍 12 Vine Street, Downtown • Open Daily 12PM – 11PM • (555) 987-6543</p></div><div class="hero-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="restaurant"></div></div>
+<div class="strip"><div class="s1"><h3>⭐ 4.9 / 5</h3><p>5,200+ happy reviews</p></div><div class="s2"><h3>👨‍🍳 18 Years</h3><p>Chef Marco Bellini</p></div><div class="s3"><h3>🍽️ 40+ Dishes</h3><p>Fresh daily menu</p></div><div class="s4"><h3>🥂 Rooftop</h3><p>Terrace + private hall</p></div></div>
+<div class="sec" id="menu"><h2>Signature Menu</h2><p class="sub">Handcrafted every morning — pick your craving</p><div class="tabs"><span class="on">🔥 Mains</span><span>🥗 Starters</span><span>🍰 Desserts</span><span>🍷 Drinks</span></div><div class="menu-grid">
+<div class="dish"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80"><div><span class="price">$42</span><h3>Truffle Ribeye</h3><p style="font-size:14px;opacity:.65">28-day aged, black truffle, smoked butter</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80"><div><span class="price">$34</span><h3>Saffron Lobster Pasta</h3><p style="font-size:14px;opacity:.65">Lobster, scallops, saffron cream</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80"><div><span class="price">$18</span><h3>Wood-Fired Pizza</h3><p style="font-size:14px;opacity:.65">San Marzano, buffalo mozzarella, basil</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80"><div><span class="price">$19</span><h3>Burrata & Figs</h3><p style="font-size:14px;opacity:.65">Creamy burrata, caramelized figs</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80"><div><span class="price">$12</span><h3>Pistachio Tiramisu</h3><p style="font-size:14px;opacity:.65">Espresso, mascarpone, pistachio</p></div></div>
+<div class="dish"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80"><div><span class="price">$14</span><h3>Chianti Reserve</h3><p style="font-size:14px;opacity:.65">Tuscany 2018, sommelier pick</p></div></div>
+</div></div>
+<div class="chef"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"><div><p style="color:#c0392b;font-weight:700;letter-spacing:2px">MEET THE CHEF</p><h2 style="font-size:40px;text-align:left">Marco Bellini — From Rome With Fire</h2><p style="opacity:.7;margin:14px 0">Trained in Rome & Paris, 2 Michelin stars, famous for open-fire cooking and handmade pasta. Every plate is a story of Italy.</p><ul style="line-height:2.2;list-style:none"><li>🏆 Best Italian Chef 2024</li><li>📺 TV Show "Fire & Flavor"</li><li>🌿 Farm-to-table philosophy</li></ul><br><a href="#book" class="btn btn-dark">Taste His Menu</a></div></div>
+<div class="sec"><h2>Inside Savoria</h2><p class="sub">Candlelight • Rooftop • Wine cellar • Private hall for 40</p><div class="gallery"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=500&q=80"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=80"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80"></div></div>
+<div class="sec" style="padding-top:0"><h2>Guests Love Us</h2><p class="sub">Real reviews from Google & TripAdvisor</p><div class="reviews"><div class="rev r1">⭐⭐⭐⭐⭐<p>"Best anniversary dinner ever. The ribeye melted, jazz was perfect."</p><b>— Daniel & Mia</b></div><div class="rev r2">⭐⭐⭐⭐⭐<p>"Beautiful rooftop, fast service, tiramisu is a must!"</p><b>— Sofia R.</b></div><div class="rev r3">⭐⭐⭐⭐⭐<p>"Booked for 20 people, flawless private event. Highly pro team."</p><b>— James K.</b></div></div></div>
+<div class="book" id="book"><div><h2 style="font-size:42px">Reserve Tonight — Free Dessert + Valet</h2><p style="margin:12px 0">30-second online booking. Free tiramisu for this week's reservations. Private events & birthdays welcome.</p><p>📞 (555) 987-6543 • Open till 11PM</p></div><div class="form"><h3>Book a Table</h3><input placeholder="Your name"><input type="tel" placeholder="Phone"><div style="display:flex;gap:8px"><input type="date"><input type="time"></div><select><option>2 Guests</option><option>4 Guests</option><option>Private Hall (10+)</option></select><button class="btn btn-red" style="width:100%" onclick="alert('Grazie! Your table is reserved.')">Reserve Now</button></div></div>
+<footer><h3 style="color:#fff;font-size:24px">Savoria.</h3><p>12 Vine Street • reserve@savoria.com • @savoria • © 2026 All rights reserved</p></footer>
+</div>
+</body>
+</html>
